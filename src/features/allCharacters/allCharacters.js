@@ -32,12 +32,12 @@ function AllCharacters() {
 
   const renderCharacters = () => {
     return (data ).map((element)=>{
-      return    <Col xs={6} md={4} lg={3}>
-                    <img src={element.image} alt={element.name} />
-                    <div>{element.name}</div>
-                    <div>{element.gender}</div>
-                    <div>{element.birth_planet}</div>
-                    <div>{element.birth_year}</div>
+      return    <Col xs={6} md={4} lg={3} className="text-light p-4">
+                    <img src={element.image} alt={element.name} />                    
+                    <div className="info">{element.name}</div>
+                    <div className="info">{element.gender}</div>
+                    <div className="info">Birth Planet: {element.birth_planet}</div>
+                    <div className="info pb-2">Birth Year: {element.birth_year}</div>                    
                 </Col>                
               
     })
